@@ -1,1 +1,10 @@
-hello
+count no of subseq. - https://ide.geeksforgeeks.org/PcNkrILFWV
+input - "abc"
+output - 8
+approach - faith is that "bc" will give me its subseq count as 4 then I will return 4+4=8. for base case i will return 1.
+
+get all subseq. - https://ide.geeksforgeeks.org/65XbUYTqN4
+input - "abc"
+output - [ "", a, b, c, ab, bc, ac, abc ]
+approach - faith is that "bc" will give me its subseq as ["", b, c, bc] then I will append and neglect 'a' for all of them. for base case i will return [""].
+
