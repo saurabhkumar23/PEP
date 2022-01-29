@@ -1,10 +1,43 @@
-count no of subseq. - https://ide.geeksforgeeks.org/PcNkrILFWV
+count no of subseq thro 1 call - https://ide.geeksforgeeks.org/PcNkrILFWV
 input - "abc"
 output - 8
 approach - faith is that "bc" will give me its subseq count as 4 then I will return 4+4=8. for base case i will return 1.
 
-get all subseq. - https://ide.geeksforgeeks.org/65XbUYTqN4
+get all subseq thro 1 call - https://ide.geeksforgeeks.org/65XbUYTqN4
 input - "abc"
 output - [ "", a, b, c, ab, bc, ac, abc ]
 approach - faith is that "bc" will give me its subseq as ["", b, c, bc] then I will append and neglect 'a' for all of them. for base case i will return [""].
 
+print all subseq thro 2 calls - https://ide.geeksforgeeks.org/TlPYwUAX4r
+input - "abc"
+output - "", a, b, c, ab, bc, ac, abc 
+approach - there will be 2 faith calls.
+           first faith call - I have created my answer by choosing first character, rest of string now you have to create your answer.
+           second faith call - I have created my answer by neglecting first character, rest of string now you have to create your answer.
+           base case - print your answer and return.
+           'print keypad combinations' is also having this same logic!
+
+decode Ways  - https://ide.geeksforgeeks.org/hT0EZhpzpx
+input - "2241"
+output - 3 ; ( 2,2,4,1 : 2,24,1 : 22,4,1 )
+approach - there will be 2 faith calls, I will call them wisely
+           first faith - string excluding first character will give me the no of encodings of it suppose x.
+           second faith- string excluding first 2 characters will give me the no of encoding of it suppose y.
+           then I will return x + y as my no of encoding because I will prepend my characters over those recursive answers.
+           base case - If string becomes empty, I will return 1.
+           how to decide calls? 
+           0 , x = 0 and 0x having no encoding, so return 0
+           0 , 0 = 0 and 00 having no encoding, so return 0
+           x , 0 = x having but x0 having only if <= 26
+           x , x = x having but xx having only if <= 26
+           
+step down from stairs from n to 0 - https://ide.geeksforgeeks.org/g9usHgrf1H (count, print, get)
+input - 3
+output - 4 (count) 
+         111, 12, 21, 3 (print)
+         [111, 12, 21, 3] (get)
+approach - there will be 3 faith calls, I will call them wisely, only call if I step on a stair >= 0.
+           count - n-1, n-2, n-3 will give it counts suppose x, y, z then I will return x + y + z, base case is to return 1 for n == 0.
+           print - I have created my answer now n-1, n-2, n-3 will create its own, base case is to print the answer and return when n == 0.
+           get - n-1, n-2, n-3 will give it answer as [11, 2] & [1] & [""] then I will append "1","2","3" respectively to their answer, base case is return [""] for n == 0.
+           mazepath with H,V,D also having this same logic!
