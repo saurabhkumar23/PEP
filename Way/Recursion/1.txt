@@ -41,3 +41,8 @@ approach - there will be 3 faith calls, I will call them wisely, only call if I 
            print - I have created my answer now n-1, n-2, n-3 will create its own, base case is to print the answer and return when n == 0.
            get - n-1, n-2, n-3 will give it answer as [11, 2] & [1] & [""] then I will append "1","2","3" respectively to their answer, base case is return [""] for n == 0.
            mazepath with H,V,D also having this same logic!
+
+      
+           
+           
+           
