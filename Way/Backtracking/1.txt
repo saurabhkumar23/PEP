@@ -13,4 +13,11 @@ output - 123, 132, 213, 231, 321, 312 (print)
 approach - there will be length no of faith calls.
            print - I have created my answer by considering ith character and make it as negative in array to mark it as visited. now rest of the unvisited array location you                    have to make your answer. I will make it positive while coming down the recursion. I also take a level variable to track the base case so when level equals                    length print your answer and return.      
            get - rest of unvisited array location will suppose to give me its permutations array and now I will append ith character to make my answer and then return that                    array. I will make it positive while coming down the recursion. I also take a level variable to track the base case so when level equals length return [""]           
-     
+maze path in 4 directions - https://ide.geeksforgeeks.org/CBTYUdIUwR
+approach - atmax 4 calls, I will call them wisely, only call when i land on the maze and that location is not visited yet.
+           i will mark myself then make calls and then unmark.
+           print - i have created my answer by adding the direction now my calls will create their answer.
+                   base case - when i reach the end block, I will print my answer and return.
+           count - my calls will give me their number of ways to reach from that location to destination now i will sum up all and return that sum.
+                   base case - when i reach the end block, I return 1.
+           with jumps ---> just put a for loop inside dir for loop.
