@@ -1,0 +1,20 @@
+Leaves in Binary Tree - https://practice.geeksforgeeks.org/problems/count-leaves-in-binary-tree/1/
+approach - count - 2 calls, left give its count c1 and right give its count c2, If i am a leaf I return c1 + c2 + 1 else c1 + c2. base case - for null return 0.
+           print - 2 calls, left will print its leaves, right will print its leaves, If i am a leaf I will print myself. base case - for null return.
+           
+nodes having exactly one child in Binary Tree - https://www.geeksforgeeks.org/print-the-nodes-having-exactly-one-child-in-a-binary-tree/
+approach - count - 2 calls, left give its count c1 and right give its count c2, If i am a single child I return c1 + c2 + 1 else c1 + c2. base case - for null return 0.
+           print - 2 calls, left will print its single childs, right will print its single childs, If i am a single child I will print myself. base case - for null return.
+           
+check if data present in a binary tree - https://ide.geeksforgeeks.org/3aeCUzmujf
+approach - check - 2 calls, If am the data then I simply return true else left give your answer, If true I will return true else I will call right, that will be the answer.
+                   base case - for null return false.
+           print (root to node path) - I will use above recursion tree logic.
+                                       2 calls, If am the data then I simply print it and return true else left give your answer, If true I will print it return true else 
+                                       I will call right, that will be the final answer, If true i will print it and return that final answer.
+                                       base case - for null return false.
+           get (root to node path) - 2 calls, If am the data then I simply add myself to arraylist and return my arraylist else left give your answer, If it is having some 
+                                     arraylist then there must be some path so I add myself to that arraylist and return that arraylist else I will call right,
+                                     that will be the final answer, If it is having some arraylist then there must be some path so I add myself to that arraylist 
+                                     and return that arraylist else I will return null.
+                                     base case - for null return null.
