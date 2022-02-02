@@ -1,0 +1,7 @@
+we can sometimes work iterative in BST not recursive bcz we know where to go left or right.
+
+search - https://leetcode.com/problems/search-in-a-binary-search-tree/submissions/
+approach - it is iterative binary search
+           root will try to find the node till it reaches the target or the null.
+           
+           
