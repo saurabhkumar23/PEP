@@ -1,0 +1,4 @@
+kadane's algorithm - https://leetcode.com/problems/maximum-subarray/
+approach - take two variables current_best and overall_best
+           we will try to create a train by considering the best option everytime
+           
