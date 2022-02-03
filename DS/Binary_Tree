@@ -76,8 +76,29 @@ approach - left will tell its isBst, min, max, lBstSize, lBstNode
             myself.lBstSize = left.lBstSize > right.lBstSize ? left.lBstSize : right.lBstSize;
             myself.lBstNode = left.lBstSize > right.lBstSize ? left.lBstNode : right.lBstNode;   
            
+lca - https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
+approach - all nodes must unique
+           it can handle if node1 == node2, for this the answer is that node.
+           it can handle for node1 and node2 may be present or not.
+           first make two ArrayList and get node-to-root-path from check-if-data-present-in-a-binary-tree, print (root to node path) method.
+           if some ArrayList is empty, that signifies that node is not present in tree so we can return null
+           if we get both filled ArrayList, traverse both the ArrayList from end simuntaneously and stop till any of them reaches the end or you get unequal data nodes.
+           the node just after this index is your answer.
+  
+Min distance in terms of edges between two given nodes - https://practice.geeksforgeeks.org/problems/min-distance-between-two-given-nodes-of-a-binary-tree/1/
+approach - exactly same as above just return i + 1 + j + 1.
+
+are 2 trees similar in structure - https://ide.geeksforgeeks.org/dk8zGXrXu5
+approach - I will care only for the current node
+           if both null, return true
+           if both not null, left will tell me its answer if no i will return no else right will tell me its answer and i will return that as my answer
+           if both above conditions not met that means either of them is null, so return false
            
-           
-           
-           
-           
+ are 2 trees similar in structure and data - https://practice.geeksforgeeks.org/problems/determine-if-two-trees-are-identical/1/
+ approach - exactly same as above, just put one condition in the return statement.
+ 
+ are 2 trees mirror - https://ide.geeksforgeeks.org/vPcXVG7ZeE
+ approach - exactly same as above, just call recursively for left with right and vice-versa.
+ 
+ are 2 trees symmetric - https://practice.geeksforgeeks.org/problems/symmetric-tree/1/
+ approach - exactly same as above, just call above program with root and root, bcz it will be symmetric if it is mirror of itself.
