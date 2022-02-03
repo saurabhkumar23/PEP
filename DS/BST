@@ -4,4 +4,52 @@ search - https://leetcode.com/problems/search-in-a-binary-search-tree/submission
 approach - it is iterative binary search
            root will try to find the node till it reaches the target or the null.
            
+get node to root path - https://ide.geeksforgeeks.org/O3iOetmoTg
+approach - it is iterative binary search
+           root will add the data into the arraylist and will try to find the node till it reaches the target or the null
+
+lca - https://ide.geeksforgeeks.org/WP9p78TxpJ
+approach - it is iterative binary search
+           both elements must present in bst otherwise give wrong result.
+           root will try to go to the point till it will not able to find the path that is left or right, simple means now both elements are on both the sides.
+           
+print in range - https://ide.geeksforgeeks.org/LoKzS8y7Dp
+approach - it is recursive
+           if data not present, no problem, it will work fine
+           just inorder traversal and print data only if it lies in the range.
+           
+add node and return the new root - https://ide.geeksforgeeks.org/B2TNPN4nhN
+approach - it is recursive binary search
+           if node data is already exist in the tree, no problem it will work fine
+           if data present in left then my faith is left will add the data and return its new root and then i will put it in my left pointer,
+           else right will do this same for me.
+           base case - for null create and return that new node 
+           
+remove node and return the new root - https://leetcode.com/problems/delete-node-in-a-bst/submissions/
+approach - it is recursive binary search
+           nodes must contains unique values 
+           if the node which is to be deleted is not present, it works fine
+           if remove-node-data lies on the left, then my faith is left will remove that node and return its new root and i will put it in my left pointer 
+           if it lies on the right, then same faith words.
+           if it equals then check this:
+           1. if i am a leaf node return null
+           2. if i am a single child node return root of my child
+           3. if i have both childs, first i will replace my data with minimum of my right child and then call same function for my right child to remove that same data and
+              then i will put that new root in my right. it will never struct in loop because minimum will never be a node with both the childs.
+           finally, return your new root.
+           base case - for null, return null, it will help me when remove-node-data is not present in tree
+           
+Add all greater values to every node in a BST - https://practice.geeksforgeeks.org/problems/add-all-greater-values-to-every-node-in-a-bst/1/
+approach - it is recursive
+           it is inorder traversal from right to left, and taking a static variable to track the sum so far.
+           taking an array of size 1 can be an alternative of using static variable, so i will use this.
+           so, do inorder traversal from right and replace nodeValue as sum + nodeValue and update the sum on inorder. for base case just return.
+           
+           
+           
+           
+           
+           
+           
+           
            
