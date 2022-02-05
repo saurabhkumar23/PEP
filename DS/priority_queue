@@ -1,0 +1,50 @@
+-----> how sorting comparators actually works?
+a - this 
+b - other 
+reality               what we pass to compareTo                priorityQueue assumes            what priorityQueue will do (default is min pq)
+a > b                       a - b > 0                                 a > b                             a to bottom            -- min pq
+a < b                       a - b < 0                                 a < b                             a to top               -- min pq
+a > b                       b - a < 0                                 a < b                             a to top               -- max pq
+a < b                       b - a > 0                                 a > b                             a to bottom            -- max pq
+conclusion
+increasing order - pass a-b to compareTo
+decreasing order - pass b-a to compareTo
+
+-----> suppose you create a priority queue and insert 10 phones object inside it, now set the priority the phones for your priority queue according to this,
+bigger RAM having more priority, if equal bigger Storage, if equal bigger battery backup
+        PriorityQueue<mobilePhone> pq = new PriorityQueue<>((a, b) -> {
+            if (a.Ram != b.Ram)
+                return b.Ram - a.Ram;
+            else if (a.Storage != b.Storage)
+                return b.Storage - a.Storage;
+            else
+                return b.BatteryBackup - a.BatteryBackup;
+        });
+
+------> suppose you have a 2-d array and you have to sort the rows according to the increasing values of 2nd column 
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> {
+            return a[1] - b[1];
+        });
+        
+-----> what is overridding toString() concept?
+syso(object) calls object.toString(), if its not present then it just return the object address.
+syso(object){
+  object.toString();
+}
+syso(arr) - arrr.toString() - 2bj5vh1b9v7cx7c
+syso(arrayList) - arrayList.toString() - [2,5,2,1,6]
+syso(stud1) - stud1.toString() - return the object values according to you
+
+
+
+
+
+
+
+
+
+
+
+
+
+
