@@ -35,7 +35,26 @@ syso(arr) - arrr.toString() - 2bj5vh1b9v7cx7c
 syso(arrayList) - arrayList.toString() - [2,5,2,1,6]
 syso(stud1) - stud1.toString() - return the object values according to you
 
+kth largest element in array - https://leetcode.com/problems/kth-largest-element-in-an-array/submissions/
+approach- take a priorityQueue of k elements and then add and remove for size > k, atlast you will left with top k elements of array in the priorityQueue.
+          complexity - nlogk
 
+return a 1d array containing elements of 2d array (which is sorted row-wise) in sorted order - https://ide.geeksforgeeks.org/TlTWHZQrH2
+concept - suppose a 2d array of r rows and c columns then,
+          to find encodedIndex of (i,j) element
+          encodedIndex = i * c + j 
+          to find (i,j) from encodedIndex
+          i = encodedIndex / c
+          j = encodedIndex % c
+ approach - create a min priorityQueue for holding encodedIndex
+            add all the first column encodedIndexs to the pq
+            add every next encodedIndex for the popped encodedIndex and do this step till pq becomes empty
+            complexity - (r*c)log(r)
+            
+            
+            
+            
+priorityQueue<Integer> holding the encoding index of a 2d array
 
 
 
