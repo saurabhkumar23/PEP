@@ -9,14 +9,6 @@ approach - count - 2 calls, left give its count c1 and right give its count c2, 
 number of nodes from a node to root - https://ide.geeksforgeeks.org/tQJONYzU1w
 approach - if root value is target return 1, else left will give its count, if there is some count then return count + 1 else call right, if there is some count return 
            count + 1 else return -1. base case - for null return -1.
-
-print k level away from node - https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/
-approach - first:
-           get ArrayList<TreeNode> node-to-root-path from check-if-data-present-in-a-binary-tree, print (root to node path) method.
-           traverse and call print-k-level-down-from-root, print (root to node path) method with k value as k-i and previous node as the blockage node.
-           second: (without node-to-root-path arrayList space)
-           call number-of-nodes-from-a-node-to-root, and do this modification its code as, whenever you find some count, call print-k-level-down-from-root with k value as
-           that returned count and respective node as the blockage node.
            
 check if binary tree is bst - https://leetcode.com/problems/validate-binary-search-tree/
 approach - left will tell isBst,max,min. If left is not a bst then i am also not a bst, so i will return left.
