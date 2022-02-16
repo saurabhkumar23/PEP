@@ -5,9 +5,6 @@ approach - count - 2 calls, left give its count c1 and right give its count c2, 
 nodes having exactly one child in Binary Tree - https://www.geeksforgeeks.org/print-the-nodes-having-exactly-one-child-in-a-binary-tree/
 approach - count - 2 calls, left give its count c1 and right give its count c2, If i am a single child I return c1 + c2 + 1 else c1 + c2. base case - for null return 0.
            print - 2 calls, left will print its single childs, right will print its single childs, If i am a single child I will print myself. base case - for null return.
-           
-print k level down from root - https://practice.geeksforgeeks.org/problems/k-distance-from-root/1/
-approach - if root is at target level, print and return, else call left and right with k - 1, base case - for null return.
 
 number of nodes from a node to root - https://ide.geeksforgeeks.org/tQJONYzU1w
 approach - if root value is target return 1, else left will give its count, if there is some count then return count + 1 else call right, if there is some count return 
