@@ -8,43 +8,7 @@ approach - count - 2 calls, left give its count c1 and right give its count c2, 
 
 number of nodes from a node to root - https://ide.geeksforgeeks.org/tQJONYzU1w
 approach - if root value is target return 1, else left will give its count, if there is some count then return count + 1 else call right, if there is some count return 
-           count + 1 else return -1. base case - for null return -1.
-           
-check if binary tree is bst - https://leetcode.com/problems/validate-binary-search-tree/
-approach - left will tell isBst,max,min. If left is not a bst then i am also not a bst, so i will return left.
-           right will tell isBst,max,min. If right is not a bst then i am also not a bst, so i will return right.
-           if both left and right are bst then i will check myself, if left-max < myself < right-min then i am a bst and my max is right-max and min is left-min, take care 
-           of choosing the value of my max and min when dealing with a null bstPair. for that take Math.max() and Math.min()
-           base case - for null i will return empty bstPair having isBst as true, max is -infinity and min is +infinity.
-           
-check if binary tree is balanced - https://leetcode.com/problems/balanced-binary-tree/
-approach - left will tell isBal,height. If left is not bal then i am also not bal, so i will return left.
-           right will tell isBal,height. If right is not bal then i am also not bal, so i will return right.
-           if both left and right are bal then i will check myself, if Math.abs(left-height - right-height) <= 1 then i am bal and my height is 
-           Math.max(left-height,right-height) + 1
-           base case - for null i will return empty balPair having isBal as true, height as -1.        
-           
-tilt of a binary tree - https://leetcode.com/problems/binary-tree-tilt/
-approach - left will tell its tilt,sum. right will tell its tilt,sum. 
-           my tilt will be leftTilt + rightTilt + Math.abs(leftSum - rightSum);
-           my sum will leftSum + rightSum + node.data
-           base case - for null i will return empty tiltPair having tilt = 0 and sum = 0            
-          
-           
-largest BST subtree in a binary tree - https://practice.geeksforgeeks.org/problems/largest-bst/1/
-approach - left will tell its isBst, min, max, lBstSize, lBstNode
-           right will tell its isBst, min, max, lBstSize, lBstNode
-           first i will check myself for bst by basic 3 conditions.
-           if i am a bst, then i am the larget bst. 
-            myself.isBst = true;
-            myself.min = Math.min(left.min, root.data);
-            myself.max = Math.max(right.max, root.data);
-            myself.lBstSize = left.lBstSize + right.lBstSize + 1;
-            myself.lBstNode = root;
-           else either left or right is having the largest bst.
-            myself.isBst = false;
-            myself.lBstSize = left.lBstSize > right.lBstSize ? left.lBstSize : right.lBstSize;
-            myself.lBstNode = left.lBstSize > right.lBstSize ? left.lBstNode : right.lBstNode;   
+           count + 1 else return -1. base case - for null return -1.    
            
 lca - https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
 approach - all nodes must unique
