@@ -29,13 +29,7 @@ approach - left will tell its tilt,sum. right will tell its tilt,sum.
            my tilt will be leftTilt + rightTilt + Math.abs(leftSum - rightSum);
            my sum will leftSum + rightSum + node.data
            base case - for null i will return empty tiltPair having tilt = 0 and sum = 0            
-           
-diameter of a binary tree - https://leetcode.com/problems/diameter-of-binary-tree/
-approach - faith goes like.... left will give its maxDiameter, right will give its maxDiameter, I will calc my maxDiameter as hl + hr + 2, and then return max of all three.
-           left will tell its maxDiameter, height. right will tell its maxDiameter, height. 
-           my maxDiameter will be max of ld, rd, hl + hr + 2
-           my height will max of (hl, hr) + 1
-           base case - for null i will return empty diameterPair having maxDiameter = 0 and height = -1   
+          
            
 largest BST subtree in a binary tree - https://practice.geeksforgeeks.org/problems/largest-bst/1/
 approach - left will tell its isBst, min, max, lBstSize, lBstNode
